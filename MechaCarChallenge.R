@@ -1,5 +1,5 @@
 install.packages("tidyverse")
-install.packages("ggplot2")
+
 
 # Load dplyr package and tidyverse:
 library(dplyr)
@@ -20,8 +20,7 @@ summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_cleara
 suspension_table <- read.csv(file = "Data/Suspension_Coil.csv", check.names = F)
 
 # Create a total_summary data frame:
-total_summary <- suspension_table %>% summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), Standard_Deviation = sd(PSI),
-                                               number_rows =  n(), .groups = "keep")
+total_summary <- suspension_table %>% summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), Standard_Deviation = sd(PSI))
 
 # Create a lot_summary using group_by():
 lot_summary <- suspension_table %>% group_by(Manufacturing_Lot) %>% summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), Standard_Deviation  = sd(PSI))
@@ -36,7 +35,12 @@ first_lot <- subset(suspension_table, Manufacturing_Lot == "Lot1")
 second_lot <- subset(suspension_table, Manufacturing_Lot == "Lot2")
 third_lot <- subset(suspension_table, Manufacturing_Lot == "Lot3")
 
-# Test to determine if The PSI for each manufacturing lots is statistically different from the population mean of 1.500# per square inch.
+# One sample test to determine if The PSI for each manufacturing lots is statistically different from the population mean of 1.500# per square inch.
 t.test(first_lot[["PSI"]], mu = 1500)
 t.test(second_lot[["PSI"]], mu = 1500)
 t.test(third_lot[["PSI"]], mu = 1500)
+
+# Two samples test to determine whether the means are statistically different.
+t.test((suspension_table[["PSI"]]), (first_lot[["PSI"]]))
+t.test((suspension_table[["PSI"]]), (second_lot[["PSI"]]))
+t.test((suspension_table[["PSI"]]), (third_lot[["PSI"]]))
