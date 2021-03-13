@@ -65,12 +65,12 @@ Analysing Lot-3, we have evidence to reject the null hypothesis, the p-value (~0
 In this study, we will analyse what metrics would be of interest to a consumer to quantify how the MechaCar would perform against the competition.
 The cost and maintenance cost will be metrics with interested to look at.
 - The null hypothesis:
-<br>
+
 Is MechaCar price correctly compared to other constructors? 
 Is MechaCar maintenance cost-efficient compared to other constructors? 
-
-- The alternative hypothesis:
 <br>
+- The alternative hypothesis:
+
 Is MechaCar not price correctly compared to other constructors? 
 Is MechaCar maintenance not cost-efficient compared to other constructors? 
   
