@@ -66,12 +66,14 @@ In this study, we will analyse what metrics would be of interest to a consumer t
 The cost and maintenance cost will be metrics with interested to look at.
 - The null hypothesis:
 
-Is MechaCar price correctly compared to other constructors? 
+Is MechaCar price correctly compared to other constructors?
+<br>
 Is MechaCar maintenance cost-efficient compared to other constructors? 
 <br>
 - The alternative hypothesis:
 
-Is MechaCar not price correctly compared to other constructors? 
+Is MechaCar not price correctly compared to other constructors?
+<br>
 Is MechaCar maintenance not cost-efficient compared to other constructors? 
   
 To do this statistical analysis we will need to gather data on the price and maintenance cost from MechaCar and from a panel of others cars manufactures for comparison purposes.
